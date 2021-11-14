@@ -1,0 +1,37 @@
+{
+  "name": "DXPBot",
+  "version": "1.0.0",
+  "description": "Music bot ",
+  "main": "index.js",
+  "author": "Everton Cosmo",
+  "license": "MIT",
+  "engines": {
+    "node": "16.11.1"
+  },
+  "scripts": {
+    "start": "pm2-runtime start ecosystem.config.js --only production",
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules src/index.ts",
+    "build": "tsc --project ./"
+  },
+  "devDependencies": {
+    "@types/module-alias": "^2.0.1",
+    "@types/node": "^16.11.7",
+    "@types/node-fetch": "^3.0.3",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "@discord-player/extractor": "^3.0.2",
+    "@discordjs/opus": "^0.7.0",
+    "@discordjs/voice": "^0.7.5",
+    "discord-player": "^5.1.0-dev.1635768412.a0badb8",
+    "discord.js": "^13.3.1",
+    "dotenv": "^10.0.0",
+    "ffmpeg-static": "^4.4.0",
+    "module-alias": "^2.2.2",
+    "node-fetch": "^3.1.0",
+    "opusscript": "^0.0.8",
+    "play-dl": "^1.3.0",
+    "pm2": "^5.1.2"
+  }
+}
