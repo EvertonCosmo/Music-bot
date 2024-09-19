@@ -1,15 +1,10 @@
-import { Client, Message } from 'discord.js';
+export class Command {
+  private name: string;
 
-export abstract class Command {
-  name!: string;
-  voiceChannel?: boolean;
-  description?: string;
+  private description: string;
 
-  constructor(name: string, isVoiceChannel?: boolean, description?: string) {
+  constructor(name: string, description: string) {
     this.name = name;
-    this.voiceChannel = isVoiceChannel;
     this.description = description;
   }
-
-  // abstract execute(query: string, message: Message): void;
 }

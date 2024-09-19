@@ -1,5 +1,5 @@
-import { Message } from 'discord.js';
+import type { Message } from "discord.js";
 
 export interface ICommand {
-  execute(message: Message, query?: string): void;
+	execute(message: Message, query?: string): Promise<unknown>;
 }

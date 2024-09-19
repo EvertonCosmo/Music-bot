@@ -1,19 +1,15 @@
-import { GuildResolvable, Message } from 'discord.js';
-import { player } from '..';
-import { ICommand } from 'interfaces/Icommand';
+import type { GuildResolvable, Message } from "discord.js";
 
-export class ClearCommand implements ICommand {
-  execute(message: Message<boolean>, query?: string): void {
-    async function exe() {
-      const queue = player.getQueue(message.guild as GuildResolvable);
-      const hasPlaying = queue?.playing;
-      if (!queue || !hasPlaying) return message.channel.send(`No music playing ${message.author} ...`);
+import { useMainPlayer } from "discord-player";
+import type { ICommand } from "../interfaces/Icommand";
+import { Command } from "../interfaces/command";
 
-      if (queue) await queue.clear();
-
-      message.react('✅');
+export class ClearCommand extends Command{
+    execute(message: Message, query?: string): Promise<unknown> {
+       
     }
 
-    (() => exe())();
+  async private execute() {
+
   }
 }

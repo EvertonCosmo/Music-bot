@@ -1,4 +1,4 @@
-import { ICommand } from 'interfaces/Icommand';
+import type { ICommand } from "../interfaces/Icommand";
 
 import {
   BackCommand,
@@ -16,9 +16,8 @@ import {
   NowPlayingCommand,
   RemoveCommand,
   PingCommand,
-  ClearCommand,
-  TogetherCommand,
-} from '../player';
+  ClearCommand,  
+} from "../player";
 
 const commands: { [index: string]: ICommand } = {
   play: new PlayCommand(),
@@ -37,8 +36,8 @@ const commands: { [index: string]: ICommand } = {
   remove: new RemoveCommand(),
   ping: new PingCommand(),
   clear: new ClearCommand(),
-  tg: new TogetherCommand(),
 };
+
 export class CommandFactory {
   public generateCommand(command: string): ICommand {
     return commands[command];

@@ -1,13 +1,20 @@
-import { Message, MessageEmbed } from 'discord.js';
-import { ICommand } from 'interfaces/Icommand';
+import { Message, EmbedBuilder, TextChannel } from "discord.js";
+import { ICommand } from "interfaces/Icommand";
 
 export class HelpCommand implements ICommand {
-  execute(message: Message<boolean>, query?: string): void {
-    async function exe() {
-      const embed = new MessageEmbed();
+	        execute(message: Message, query?: string) {
+		this.executeHelpCommand(message, query);
+	}
 
-      embed.setColor('#44b868');
-      embed.setDescription(`**Commands:**\n
+	private async executeHelpCommand(
+		message: Message,
+		query?: string,
+	): Promise<void> {
+		try {
+			const embed = new EmbedBuilder();
+
+			embed.setColor("#44b868");
+			embed.setDescription(`**Commands:**\n
           - help (show this help)
           - exp (exe: exp @username) remove users from voice channel
           - play (exe: play **song name**)
@@ -25,12 +32,11 @@ export class HelpCommand implements ICommand {
           - ping 
           - tg (discord together(Youtube and games on discord ))
       `);
-      return message.channel.send({
-        embeds: [embed],
-      });
-    }
-    (() => {
-      exe();
-    })();
-  }
+			if (message.channel instanceof TextChannel) {
+				message.channel.send({ embeds: [embed] });
+			}
+		} catch (error) {
+			console.log(error);
+		}
+	}
 }
