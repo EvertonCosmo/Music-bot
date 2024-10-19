@@ -1,19 +1,20 @@
 {
-  "compilerOptions": {
-    "target": "ES2023",
-    "module": "CommonJS",
-    "allowJs": false,
-    "outDir": "./dist",
-    "noEmit": false,
-    "noImplicitAny": false,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "strict": false,
-    "baseUrl": "./src",
-    "paths": {
-      "@config/*": ["config/*"]
-    },
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  }
+	"compilerOptions": {
+		"target": "ES2023",
+		"module": "CommonJS",
+		"allowJs": false,
+		"outDir": "./dist",
+		"noEmit": false,
+		"noImplicitAny": false,
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"strict": false,
+		"baseUrl": "./",
+		"paths": {
+			"@config/*": ["./src/config/*"]
+		},
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true
+	},
+	"include": ["src/**/*", "**/*.spec.ts"]
 }
