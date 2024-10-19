@@ -1,26 +1,29 @@
-import { useMainPlayer } from "discord-player";
-import type { GuildResolvable, Message } from "discord.js";
+import { useHistory } from 'discord-player'
+import { SlashCommandBuilder, type CommandInteraction } from 'discord.js'
+import type { Command } from '../interfaces/command'
 
-import type { ICommand } from "interfaces/Icommand";
+export class BackCommand implements Command {
+	public readonly name = 'back'
+	public readonly description = 'Goes back to the previous song'
+	public readonly interaction: CommandInteraction
+	public readonly data = new SlashCommandBuilder()
+		.setName('back')
+		.setDescription('Goes back to the previous song')
 
-export class BackCommand implements ICommand {
-	execute(message: Message, query?: string): void {
-		async function exe() {
-      const player = useMainPlayer()
-			const queue = player.getQueue(message.guild as GuildResolvable);
-			const hasPlaying = queue?.playing;
-			if (!queue || !hasPlaying)
-				return message.channel.send(`No music playing ${message.author} ...`);
-			if (!queue.previousTracks[1])
-				return message.channel.send(
-					`there was no music played before ${message.author} ...`,
-				);
-			await queue.back();
-			message.react("⏮️");
+	public execute(interaction: CommandInteraction): Promise<unknown> {
+		return this.executeBackCommand(interaction)
+	}
+
+	private async executeBackCommand(interaction: CommandInteraction): Promise<unknown> {
+		const history = useHistory(interaction.guild.id)
+
+		if (!history.previousTrack) {
+			return interaction.reply({
+				content: 'There is no previous track',
+				ephemeral: true,
+			})
 		}
 
-		(() => {
-			exe();
-		})();
+		await history.previous()
 	}
 }

@@ -1,15 +1,24 @@
-import type { Message } from "discord.js";
-import type { ICommand } from "./Icommand";
+import type { CommandInteraction, SlashCommandOptionsOnlyBuilder } from 'discord.js'
 
-export abstract class Command implements ICommand {
-  private name: string;
-  private voiceChannel: boolean;
-  private description: string;
+export interface SlashCommand {
+	name: string
+	description: string
+	required: boolean
+	options: Array<{
+		name: string
+		description: string
+		required: boolean
+	}>
+}
 
-  constructor(name: string, isVoiceChannel: boolean, description: string) {
-    this.name = name;
-    this.voiceChannel = isVoiceChannel;
-    this.description = description;
-  }
-  abstract execute(message: Message, query?: string): Promise<unknown>;
+export interface Command {
+	name: string
+
+	interaction?: CommandInteraction
+
+	description: string
+
+	data: SlashCommandOptionsOnlyBuilder
+
+	execute(interaction: CommandInteraction): Promise<unknown>
 }

@@ -1,19 +1,24 @@
-import type { GuildResolvable, Message } from "discord.js";
-import type { ICommand } from "interfaces/Icommand";
+import { type CommandInteraction, SlashCommandBuilder } from 'discord.js'
 
-import { useMainPlayer } from "discord-player";
+import { useMainPlayer } from 'discord-player'
+import type { Command } from '../interfaces/command'
 
-export class DisconnectCommand implements ICommand {
-  execute(message: Message): void {
-    async function exe() {
-      const player = useMainPlayer();
-      const queue = player.getQueue(message.guild as GuildResolvable);
-      if (queue) queue.destroy();
-      message.react("👋");
-    }
+export class DisconnectCommand implements Command {
+	public readonly name: string = 'disconnect'
 
-    (() => {
-      exe();
-    })();
-  }
+	public readonly description: string = 'Disconnects from the voice channel'
+
+	public readonly interaction: CommandInteraction
+
+	public readonly data = new SlashCommandBuilder()
+		.setName('disconnect')
+		.setDescription('Disconnects from the voice channel')
+
+	execute(interaction: CommandInteraction): Promise<unknown> {
+		return this.executeDisconnectCommand(interaction)
+	}
+
+	private async executeDisconnectCommand(interaction: CommandInteraction): Promise<unknown> {
+		return Error('Not implemented yet')
+	}
 }

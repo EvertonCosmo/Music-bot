@@ -1,78 +1,53 @@
-import { config } from "dotenv";
+import { config } from 'dotenv'
 
-import { env } from "./config/globals";
-import { Player } from "discord-player";
-import {
-  ActivityType,
-  Client,
-  GatewayIntentBits,
-  type Message,
-} from "discord.js";
-import { prefixs } from "./constants/prefixs";
-import { CommandFactory } from "./factories/CommandFactory";
+import { Player } from 'discord-player'
 
-import "./player/events";
-import { YoutubeiExtractor } from "discord-player-youtubei";
+import { Client, GatewayIntentBits, Options } from 'discord.js'
 
-config();
+import { YoutubeiExtractor } from 'discord-player-youtubei'
+
+// import { playerConfig } from '@config/playerConfig'
+import { playerConfig } from './config/playerConfig'
+import { InitBot } from './entities/init_bot'
+import { events } from './constants/events/player/player-events'
+// import { env } from '@config/globals'
+import { env } from './config/globals'
+
+config()
 
 const client = new Client({
-  intents: Object.keys(GatewayIntentBits).map((a: string) => {
-    return GatewayIntentBits[a as keyof typeof GatewayIntentBits];
-  }),
-});
-
-// TODO: refactor factory
-const commandFactory = new CommandFactory();
+	intents: Object.keys(GatewayIntentBits).map((a: string) => {
+		return GatewayIntentBits[a as keyof typeof GatewayIntentBits]
+	}),
+	makeCache: Options.cacheWithLimits({
+		UserManager: 100,
+		GuildMessageManager: 100,
+	}),
+})
 
 const player = new Player(client, {
-  ytdlOptions: {
-    quality: "highestaudio",
-    highWaterMark: 1 << 27,
-    dlChunkSize: 0,
-  },
-});
+	ytdlOptions: playerConfig.opt.discordPlayer.ydlOptions,
+	// ipconfig: playerConfig.opt.discordPlayer.ipRotation,
+})
 
+player.extractors.loadDefault((ext) => ext !== 'YouTubeExtractor')
 player.extractors.register(YoutubeiExtractor, {
-  streamOptions: {
-    useClient: "ANDROID",
-  },
-});
+	authentication: env.YOUTUBE_TOKEN,
+	streamOptions: {
+		useClient: 'ANDROID',
+	},
+})
 
-player.extractors.loadDefault((ext) => ext !== "YouTubeExtractor");
+events()
 
-const token =
-  process.env.NODE_ENV === "production" ? process.env.TOKEN : env.TOKEN;
+new InitBot(client)
 
-client
-  .login(token)
-  .then((result) => console.log("discord client connect", result));
-
-client.on("ready", () => {
-  client.user?.setActivity(">help", {
-    type: ActivityType.Listening,
-  });
-  console.log("bot started");
-});
-
-client.on("error", console.error);
-
-client.on("messageCreate", async (message: Message) => {
-  try {
-    if (message.author.bot) return;
-
-    const prefix: string = message.content
-      .split(" ")
-      .shift()
-      ?.toLowerCase() as string;
-    if (prefix.charAt(0) !== ">") return;
-    if (!prefixs[prefix?.slice(1)]) await message.reply("Unknown command!");
-
-    const command = commandFactory.generateCommand(prefix.slice(1));
-
-    const query = message.content.slice(prefix.length).trim().split(/ +/g);
-    command.execute(message, query.join().replace(",", " "));
-  } catch (err) {
-    console.log({ err });
-  }
-});
+// setInterval(() => {
+// 	const memoryUsage = process.memoryUsage()
+// 	console.log(`Uso de memória:
+//     RSS: ${(memoryUsage.rss / 1024 / 1024).toFixed(2)} MB
+//     Heap Total: ${(memoryUsage.heapTotal / 1024 / 1024).toFixed(2)} MB
+//     Heap Usado: ${(memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB
+//     Externo: ${(memoryUsage.external / 1024 / 1024).toFixed(2)} MB
+//   `)
+// }, 5000)

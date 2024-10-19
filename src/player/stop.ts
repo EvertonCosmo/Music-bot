@@ -1,21 +1,36 @@
-import { useMainPlayer } from "discord-player";
-import type { GuildResolvable, Message } from "discord.js";
-import type { ICommand } from "interfaces/Icommand";
+import { type CommandInteraction, EmbedBuilder, SlashCommandBuilder } from 'discord.js'
+import type { Command } from '../interfaces/command'
+import { useQueue } from 'discord-player'
 
+export class StopCommand implements Command {
+	public readonly name = 'stop'
+	public readonly description = 'Stops the current song'
+	public readonly interaction: CommandInteraction
+	public readonly data = new SlashCommandBuilder()
+		.setName('stop')
+		.setDescription('Stops the current song')
 
-export class StopCommand implements ICommand {
-	execute(message: Message): void {
-		async function exe() {
-      const player = useMainPlayer()
-			const queue = player.getQueue(message.guild as GuildResolvable);
-			const hasPlaying = queue?.playing;
-			if (!queue || !hasPlaying)
-				return message.channel.send(`No music playing ${message.author} ...`);
-			queue.clear();
-			queue.destroy();
+	public execute(interaction: CommandInteraction): Promise<unknown> {
+		return this.executeStopCommand(interaction)
+	}
+	private async executeStopCommand(interaction: CommandInteraction): Promise<unknown> {
+		const queue = useQueue(interaction.guild.id)
+
+		if (!queue.deleted) {
+			queue.delete()
 		}
-		(() => {
-			exe();
-		})();
+
+		const embed = new EmbedBuilder()
+			.setAuthor({
+				name: interaction.user.username,
+				iconURL: interaction.user.avatarURL(),
+			})
+			.setDescription(
+				'**Stopped playing**\nStopped playing the audio and cleared the track queue.',
+			)
+			.setColor(0x44b868)
+		return interaction.reply({
+			embeds: [embed],
+		})
 	}
 }

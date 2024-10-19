@@ -1,21 +1,21 @@
-import { Guild, GuildResolvable, Message } from "discord.js";
-import { player } from "..";
-import { ICommand } from "interfaces/Icommand";
+import { type CommandInteraction, SlashCommandBuilder } from 'discord.js'
 
-export class JumpCommand implements ICommand {
-	execute(message: Message<boolean>, query?: string): void {
-		async function exe() {
-			const queue = player.getQueue(message.guild as GuildResolvable);
-			const trackIndexToJump = Number(query) - 1;
-			const track = queue.tracks[trackIndexToJump].title;
-			await queue.jump(trackIndexToJump);
-			return message.channel.send({
-				content: `⏭ **${track}** has jumped the queue`,
-			});
-		}
+import type { Command } from '../interfaces/command'
 
-		(() => {
-			exe();
-		})();
+export class JumpCommand implements Command {
+	public readonly name: string = 'jump'
+
+	public readonly description: string = 'Jumps to a song'
+
+	public readonly interaction: CommandInteraction
+
+	public readonly data = new SlashCommandBuilder().setName('jump').setDescription('Jumps to a song')
+
+	execute(interaction: CommandInteraction): Promise<unknown> {
+		return this.executeJumpCommand(interaction)
+	}
+
+	private async executeJumpCommand(interaction: CommandInteraction): Promise<unknown> {
+		return Error('Not implemented yet')
 	}
 }

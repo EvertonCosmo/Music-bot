@@ -1,28 +1,22 @@
-import { Message, EmbedBuilder, TextChannel } from "discord.js";
-import { ICommand } from "interfaces/Icommand";
+import { type CommandInteraction, EmbedBuilder, SlashCommandBuilder } from 'discord.js'
+import type { Command } from '../interfaces/command'
 
-export class HelpCommand implements ICommand {
-	        execute(message: Message, query?: string) {
-		this.executeHelpCommand(message, query);
+export class HelpCommand implements Command {
+	public readonly name: string = 'help'
+
+	public readonly description: string = 'Shows the help'
+
+	public readonly interaction: CommandInteraction
+
+	public readonly data = new SlashCommandBuilder().setName('help').setDescription('Shows the help')
+
+	execute(interaction: CommandInteraction): Promise<unknown> {
+		return this.executeHelpCommand(interaction)
 	}
 
-	private async executeHelpCommand(
-		message: Message,
-		query?: string,
-	): Promise<void> {
-		try {
-			const embed = new EmbedBuilder();
-
-			embed.setColor("#44b868");
-			embed.setDescription(`**Commands:**\n
-          - help (show this help)
-          - exp (exe: exp @username) remove users from voice channel
-          - play (exe: play **song name**)
-          - pause 
-          - resume
-          - clear (clear the queue)
-          - stop
-          - skip 
+	private async executeHelpCommand(interaction: CommandInteraction): Promise<unknown> {
+		const embed = new EmbedBuilder().setColor('#44b868').setDescription(`**Options:**\n
+          - skip (exe: skip **song name**)
           - back
           - remove (exe: remove **song number in queue**)
           - jump (exe: jump **song position on playlist** jump music)
@@ -30,13 +24,11 @@ export class HelpCommand implements ICommand {
           - queue 
           - disconnect    
           - ping 
-          - tg (discord together(Youtube and games on discord ))
-      `);
-			if (message.channel instanceof TextChannel) {
-				message.channel.send({ embeds: [embed] });
-			}
-		} catch (error) {
-			console.log(error);
-		}
+          
+      `)
+
+		return interaction.reply({
+			embeds: [embed],
+		})
 	}
 }

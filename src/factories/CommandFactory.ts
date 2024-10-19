@@ -1,45 +1,43 @@
-import type { ICommand } from "../interfaces/Icommand";
+import type { Command } from '../interfaces/command'
 
 import {
-  BackCommand,
-  DisconnectCommand,
-  ExpelledUsers,
-  PauseCommand,
-  PlayCommand,
-  QueueCommand,
-  ResumeCommand,
-  SkipCommand,
-  StopCommand,
-  LyricsCommand,
-  HelpCommand,
-  JumpCommand,
-  NowPlayingCommand,
-  RemoveCommand,
-  PingCommand,
-  ClearCommand,  
-} from "../player";
+	BackCommand,
+	ClearCommand,
+	HelpCommand,
+	JumpCommand,
+	NowPlayingCommand,
+	PauseCommand,
+	PingCommand,
+	PlayCommand,
+	QueueCommand,
+	RemoveCommand,
+	ResumeCommand,
+	SkipCommand,
+	StopCommand,
+} from '../player'
 
-const commands: { [index: string]: ICommand } = {
-  play: new PlayCommand(),
-  skip: new SkipCommand(),
-  exp: new ExpelledUsers(),
-  back: new BackCommand(),
-  pause: new PauseCommand(),
-  resume: new ResumeCommand(),
-  queue: new QueueCommand(),
-  stop: new StopCommand(),
-  disconnect: new DisconnectCommand(),
-  lyrics: new LyricsCommand(),
-  help: new HelpCommand(),
-  jump: new JumpCommand(),
-  nowplaying: new NowPlayingCommand(),
-  remove: new RemoveCommand(),
-  ping: new PingCommand(),
-  clear: new ClearCommand(),
-};
+const commands: { [index: string]: Command } = {
+	play: new PlayCommand(),
+	skip: new SkipCommand(),
+	back: new BackCommand(),
+	pause: new PauseCommand(),
+	resume: new ResumeCommand(),
+	queue: new QueueCommand(),
+	stop: new StopCommand(),
+	help: new HelpCommand(),
+	jump: new JumpCommand(),
+	nowplaying: new NowPlayingCommand(),
+	remove: new RemoveCommand(),
+	ping: new PingCommand(),
+	clear: new ClearCommand(),
+}
+
+type CommandKey = keyof typeof commands
+
+export const commandKeys: CommandKey[] = Object.keys(commands)
 
 export class CommandFactory {
-  public generateCommand(command: string): ICommand {
-    return commands[command];
-  }
+	public generateCommand(command: CommandKey): Command {
+		return commands[command]
+	}
 }
