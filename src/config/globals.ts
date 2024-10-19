@@ -1,13 +1,14 @@
-import { config } from "dotenv";
+import { config } from 'dotenv'
 
-const envFound = config();
+const envFound = config()
 
 if (!envFound) {
-  throw new Error("!  Couldn't find .env file  !");
+	throw new Error("!  Couldn't find .env file  !")
 }
 
 export const env = {
-  TOKEN: process.env.TOKEN,
-  GENIUS_TOKEN: process.env.GENIUS_TOKEN,
-  YOUTUBE_COOKIE: process.env.YOUTUBE_COOKIE,
-};
+	TOKEN: process.env.TOKEN,
+	GUILD_ID: process.env.GUILD_ID,
+	CLIENT_ID: process.env.CLIENT_ID,
+	YOUTUBE_TOKEN: process.env.YOUTUBE_TOKEN,
+}
