@@ -1,42 +1,28 @@
-import { GuildResolvable, Message } from "discord.js";
-import { player } from "..";
-import { ICommand } from "interfaces/Icommand";
+import { SlashCommandBuilder, type CommandInteraction } from 'discord.js'
 
-export class RemoveCommand implements ICommand {
-	execute(message: Message<boolean>, query?: string): void {
-		async function exe() {
-			const queue = player.getQueue(message.guild as GuildResolvable);
-			const hasPlaying = queue?.playing;
+import type { Command } from '../interfaces/command'
 
-			if (!queue || !hasPlaying)
-				return message.channel.send(`No music playing ${message.author}`);
+export class RemoveCommand implements Command {
+	public readonly name = 'remove'
+	public readonly description = 'Removes a song from the queue'
+	public readonly interaction: CommandInteraction
+	public readonly data = new SlashCommandBuilder()
+		.setName('remove')
+		.setDescription('Removes a song from the queue')
+		.addStringOption((option) =>
+			option
+				.setName('song')
+				.setDescription(
+					'The song you want to remove',
+				)
+				.setRequired(true),
+		)
 
-			if (Number(query) > queue.tracks.length)
-				return message.reply({
-					embeds: [
-						{ description: "Please insert a valid position", color: 0xb84e44 },
-					],
-				});
-			const trackToRemove = Number(query) - 1;
-			if (!queue.tracks[trackToRemove])
-				return message.reply({
-					embeds: [{ description: "No results found:", color: 0xb84e44 }],
-				});
+	public execute(interaction: CommandInteraction): Promise<unknown> {
+		return this.executeRemoveCommand(interaction)
+	}
 
-			const { title, url } = queue.tracks[trackToRemove];
-			queue.remove(trackToRemove);
-
-			message.channel.send({
-				embeds: [
-					{
-						description: `Removed [${title}](${url})`,
-						color: 0x44b868,
-					},
-				],
-			});
-		}
-		(() => {
-			exe();
-		})();
+	private async executeRemoveCommand(interaction: CommandInteraction): Promise<unknown> {
+		return Error('Not implemented')
 	}
 }

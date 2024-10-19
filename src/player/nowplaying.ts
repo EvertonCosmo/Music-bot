@@ -1,41 +1,45 @@
-import { useMainPlayer } from "discord-player";
-import type { GuildResolvable, Message } from "discord.js";
+import { EmbedBuilder, SlashCommandBuilder, type CommandInteraction } from 'discord.js'
+import type { Command } from '../interfaces/command'
+import { useQueue } from 'discord-player'
 
-import type { ICommand } from "interfaces/Icommand";
+export class NowPlayingCommand implements Command {
+	public readonly name = 'nowplaying'
+	public readonly description = 'Shows the current song'
+	public readonly interaction: CommandInteraction
+	public readonly data = new SlashCommandBuilder()
+		.setName('nowplaying')
+		.setDescription('Shows the current song')
 
-export class NowPlayingCommand implements ICommand {
-	execute(message: Message<boolean>, query?: string): void {
-		async function exe() {
-      const player = useMainPlayer()
-			const queue = player.getQueue(message.guild as GuildResolvable);
-			const hasPlaying = queue?.playing;
+	public execute(interaction: CommandInteraction): Promise<unknown> {
+		return this.executeNowPlayingCommand(interaction)
+	}
 
-			if (!queue || !hasPlaying)
-				return message.channel.send(`No music playing ${message.author}`);
+	private async executeNowPlayingCommand(interaction: CommandInteraction): Promise<unknown> {
+		const queue = useQueue(interaction.guild.id)
 
-			const progress = queue.createProgressBar({ timecodes: true, length: 8 });
-
-			return message.channel.send({
-				embeds: [
-					{
-						description: `**[${queue.current.title}](${queue.current.url})**`,
-						thumbnail: {
-							url: `${queue.current.thumbnail}`,
-						},
-						fields: [
-							{
-								name: "\u200b",
-								value: progress.replace(/0:00/g, "◉"),
-							},
-						],
-						color: 0x44b868,
-					},
-				],
-			});
+		if (!queue || !queue.isPlaying()) {
+			return interaction.reply({
+				content: `no music is playing ${interaction.user.username}`,
+				ephemeral: true,
+			})
 		}
 
-		(() => {
-			exe();
-		})();
+		const progress = queue.node.createProgressBar({
+			timecodes: true,
+			length: 8,
+		})
+
+		const embed = new EmbedBuilder()
+			.setDescription(
+				`**[${queue.currentTrack.title}](${queue.currentTrack.url})**`,
+			)
+			.setThumbnail(queue.currentTrack.thumbnail)
+			.addFields({
+				name: '⏳ Progress',
+				value: progress.replace(/0:00/g, '◉'),
+			})
+		return interaction.reply({
+			embeds: [embed],
+		})
 	}
 }

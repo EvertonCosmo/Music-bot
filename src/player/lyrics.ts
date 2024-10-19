@@ -1,57 +1,20 @@
-import { GuildResolvable, Message } from "discord.js";
-import { player, lyrics } from "..";
-import { ICommand } from "interfaces/Icommand";
+import { type CommandInteraction, type Message, SlashCommandBuilder } from 'discord.js'
 
-export class LyricsCommand implements ICommand {
-	execute(message: Message<boolean>, query?: string): void {
-		async function exe() {
-			const queue = player.getQueue(message.guild as GuildResolvable);
-			const query = `${queue.current.title} ${queue.current.author}`;
-			if (!query)
-				return message.channel.send({
-					embeds: [
-						{
-							description: `No music playing.\n`,
-							color: 0xb84e44,
-						},
-					],
-				});
-			const resultLyrics = await lyrics.search(query);
-			console.log({ resultLyrics });
+import type { Command } from '../interfaces/command'
 
-			if (!resultLyrics) {
-				message.channel.send({
-					embeds: [
-						{
-							description: `No lyrics found for ${query}.\n`,
-							color: 0xb84e44,
-						},
-					],
-				});
-			} else {
-				let trimLyrics =
-					resultLyrics.lyrics.length > 4095
-						? resultLyrics.lyrics.substring(0, 4029) + "..."
-						: resultLyrics.lyrics;
+export class LyricsCommand implements Command {
+	public readonly name: string = 'lyrics'
+	public readonly description: string = 'Shows the lyrics of the current song'
+	public readonly interaction: CommandInteraction
 
-				message.channel.send({
-					embeds: [
-						{
-							title: `${resultLyrics.title} - ${resultLyrics.artist.name}`,
-							url: resultLyrics.url,
-							thumbnail: {
-								url: resultLyrics.thumbnail,
-							},
-							description: trimLyrics,
-							color: 0x44b868,
-						},
-					],
-				});
-			}
-		}
+	public readonly data = new SlashCommandBuilder()
+		.setName('lyrics')
+		.setDescription('Shows the lyrics of the current song')
 
-		(() => {
-			exe();
-		})();
+	public async execute(interaction: CommandInteraction): Promise<unknown> {
+		return this.executeLyricsCommand(interaction)
+	}
+	private async executeLyricsCommand(interaction: CommandInteraction): Promise<unknown> {
+		return Error('Not implemented yet')
 	}
 }

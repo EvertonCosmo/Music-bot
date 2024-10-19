@@ -1,53 +1,100 @@
-import { QueryType, useMainPlayer } from "discord-player";
-import {
-  GuildVoiceChannelResolvable,
-  VoiceChannel,
-  type Message,
-} from "discord.js";
+import { QueryType, QueueRepeatMode, useMainPlayer } from 'discord-player'
+import { type ChatInputCommandInteraction, type CommandInteraction, SlashCommandBuilder } from 'discord.js'
 
-import { Command } from "../interfaces/commands";
+import type { Command } from '../interfaces/command'
 
+export class PlayCommand implements Command {
+	public readonly name: string = 'play'
 
-export class PlayCommand extends Command {
-  constructor() {
-    super("play", "Play a track");
-  }
+	public readonly description: string = 'Plays a song'
 
-  execute(message: Message, query?: string): Promise<unknown> {
-    return this.executePlayCommand(message, query);
-  }
+	public readonly interaction: CommandInteraction
 
-  private async executePlayCommand(
-    message: Message,
-    query?: string,
-  ): Promise<unknown> {
-    const player = useMainPlayer();
+	public readonly data = new SlashCommandBuilder()
+		.setName('play')
+		.setDescription('Plays a song')
+		.addStringOption((option) =>
+			option
+				.setName('song')
+				.setDescription(
+					'The song you want to play',
+				)
+				.setRequired(true),
+		)
 
-    if (!message.member?.voice.channelId) {
-      return message.reply({
-        embeds: [
-          { description: "You are not in a voice channel!", color: 0xb84e44 },
-        ],
-      });
-    }
+	public async execute(interaction: ChatInputCommandInteraction): Promise<unknown> {
+		return this.executePlayCommand(interaction)
+	}
 
-    const result = await player.search(query, {
-      requestedBy: message.author.username,
-      searchEngine: QueryType.AUTO,
-    });
+	private async executePlayCommand(interaction: ChatInputCommandInteraction): Promise<unknown> {
+		await interaction.deferReply()
+		const player = useMainPlayer()
 
-    if (!result?.tracks?.length) {
-      return message.reply({
-        embeds: [{ description: "No results found:", color: 0xb84e44 }],
-      });
-    }
+		const { channel } = interaction.guild.members.cache.get(
+			interaction.user.id,
+		).voice
 
-    player.createPlaylist(result.playlist);
+		if (channel == null) {
+			return interaction.reply({
+				embeds: [
+					{
+						description: 'You are not in a voice channel!',
+						color: 0xb84e44,
+					},
+				],
+			})
+		}
 
-    
-    player.play(
-      message.member.voice.channel as GuildVoiceChannelResolvable,
-      "dsjkdjka",
-    );
-  }
+		const query = interaction.options.getString('song')
+
+		console.log('QUERY DATA', query)
+
+		const result = await player.search(query, {
+			requestedBy: interaction.user,
+			searchEngine: QueryType.AUTO,
+		})
+
+		if (!result.hasTracks()) {
+			return interaction.editReply({
+				content: `No results found for **${query}**`,
+			})
+		}
+
+		try {
+			await player.play(channel, result, {
+				nodeOptions: {
+					volume: 100,
+					leaveOnEnd: false,
+					repeatMode: QueueRepeatMode.OFF,
+					metadata: {
+						channel: interaction.channel,
+					},
+				},
+
+				requestedBy: interaction.user,
+				connectionOptions: {
+					deaf: true,
+				},
+			})
+
+			return interaction.editReply({
+				content: `Track ${result.tracks[0].title} added to the queue ✅`,
+			})
+		} catch (error) {
+			interaction.reply({
+				embeds: [
+					{
+						description: 'Error while playing:',
+						color: 0xb84e44,
+						fields: [
+							{
+								name: 'Error',
+								value: error.message,
+							},
+						],
+					},
+				],
+			})
+		}
+	}
 }
