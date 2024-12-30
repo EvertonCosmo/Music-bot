@@ -12,6 +12,7 @@ import { InitBot } from './entities/init_bot'
 import { events } from './constants/events/player/player-events'
 // import { env } from '@config/globals'
 import { env } from './config/globals'
+import { BridgeProvider, BridgeSource } from '@discord-player/extractor'
 
 config()
 
@@ -27,16 +28,21 @@ const client = new Client({
 	}),
 })
 
+const bridgeProvider = new BridgeProvider(BridgeSource.Auto)
+
 const player = new Player(client, {
-	ytdlOptions: playerConfig.opt.discordPlayer.ydlOptions,
+	// ytdlOptions: playerConfig.opt.discordPlayer.ydlOptions,
+	bridgeProvider: bridgeProvider,
+	skipFFmpeg:false
 	// ipconfig: playerConfig.opt.discordPlayer.ipRotation,
 })
 
 player.extractors.loadDefault((ext) => ext !== 'YouTubeExtractor')
+
 player.extractors.register(YoutubeiExtractor, {
-	authentication: env.YOUTUBE_TOKEN,
 	streamOptions: {
-		useClient: 'ANDROID',
+		highWaterMark: 2097152,
+	
 	},
 })
 
