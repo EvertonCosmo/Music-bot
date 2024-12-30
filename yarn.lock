@@ -2,59 +2,59 @@
 # yarn lockfile v1
 
 
-"@biomejs/biome@^1.9.3":
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/@biomejs/biome/-/biome-1.9.3.tgz#5362fc390ac00c82e3698824490e3801d012c1b0"
-  integrity sha512-POjAPz0APAmX33WOQFGQrwLvlu7WLV4CFJMlB12b6ZSg+2q6fYu9kZwLCOA+x83zXfcPd1RpuWOKJW0GbBwLIQ==
+"@biomejs/biome@^1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@biomejs/biome/-/biome-1.9.4.tgz#89766281cbc3a0aae865a7ff13d6aaffea2842bf"
+  integrity sha512-1rkd7G70+o9KkTn5KLmDYXihGoTaIGO9PIIN2ZB7UJxFrWw04CZHPYiMRjYsaDvVV7hP1dYNRLxSANLaBFGpog==
   optionalDependencies:
-    "@biomejs/cli-darwin-arm64" "1.9.3"
-    "@biomejs/cli-darwin-x64" "1.9.3"
-    "@biomejs/cli-linux-arm64" "1.9.3"
-    "@biomejs/cli-linux-arm64-musl" "1.9.3"
-    "@biomejs/cli-linux-x64" "1.9.3"
-    "@biomejs/cli-linux-x64-musl" "1.9.3"
-    "@biomejs/cli-win32-arm64" "1.9.3"
-    "@biomejs/cli-win32-x64" "1.9.3"
+    "@biomejs/cli-darwin-arm64" "1.9.4"
+    "@biomejs/cli-darwin-x64" "1.9.4"
+    "@biomejs/cli-linux-arm64" "1.9.4"
+    "@biomejs/cli-linux-arm64-musl" "1.9.4"
+    "@biomejs/cli-linux-x64" "1.9.4"
+    "@biomejs/cli-linux-x64-musl" "1.9.4"
+    "@biomejs/cli-win32-arm64" "1.9.4"
+    "@biomejs/cli-win32-x64" "1.9.4"
 
-"@biomejs/cli-darwin-arm64@1.9.3":
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/@biomejs/cli-darwin-arm64/-/cli-darwin-arm64-1.9.3.tgz#3a981835a7a891589b356bbdb4e50157e494aa7d"
-  integrity sha512-QZzD2XrjJDUyIZK+aR2i5DDxCJfdwiYbUKu9GzkCUJpL78uSelAHAPy7m0GuPMVtF/Uo+OKv97W3P9nuWZangQ==
+"@biomejs/cli-darwin-arm64@1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@biomejs/cli-darwin-arm64/-/cli-darwin-arm64-1.9.4.tgz#dfa376d23a54a2d8f17133c92f23c1bf2e62509f"
+  integrity sha512-bFBsPWrNvkdKrNCYeAp+xo2HecOGPAy9WyNyB/jKnnedgzl4W4Hb9ZMzYNbf8dMCGmUdSavlYHiR01QaYR58cw==
 
-"@biomejs/cli-darwin-x64@1.9.3":
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/@biomejs/cli-darwin-x64/-/cli-darwin-x64-1.9.3.tgz#0e33284e5def9cbc17705b6a9acbc22b161accb1"
-  integrity sha512-vSCoIBJE0BN3SWDFuAY/tRavpUtNoqiceJ5PrU3xDfsLcm/U6N93JSM0M9OAiC/X7mPPfejtr6Yc9vSgWlEgVw==
+"@biomejs/cli-darwin-x64@1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@biomejs/cli-darwin-x64/-/cli-darwin-x64-1.9.4.tgz#eafc2ce3849d385fc02238aad1ca4a73395a64d9"
+  integrity sha512-ngYBh/+bEedqkSevPVhLP4QfVPCpb+4BBe2p7Xs32dBgs7rh9nY2AIYUL6BgLw1JVXV8GlpKmb/hNiuIxfPfZg==
 
-"@biomejs/cli-linux-arm64-musl@1.9.3":
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/@biomejs/cli-linux-arm64-musl/-/cli-linux-arm64-musl-1.9.3.tgz#b68e2fe56381cbf71770b6c785215448c47595fd"
-  integrity sha512-VBzyhaqqqwP3bAkkBrhVq50i3Uj9+RWuj+pYmXrMDgjS5+SKYGE56BwNw4l8hR3SmYbLSbEo15GcV043CDSk+Q==
+"@biomejs/cli-linux-arm64-musl@1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@biomejs/cli-linux-arm64-musl/-/cli-linux-arm64-musl-1.9.4.tgz#d780c3e01758fc90f3268357e3f19163d1f84fca"
+  integrity sha512-v665Ct9WCRjGa8+kTr0CzApU0+XXtRgwmzIf1SeKSGAv+2scAlW6JR5PMFo6FzqqZ64Po79cKODKf3/AAmECqA==
 
-"@biomejs/cli-linux-arm64@1.9.3":
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/@biomejs/cli-linux-arm64/-/cli-linux-arm64-1.9.3.tgz#bb8186f000bd7366c3a1822a4a505e374905c462"
-  integrity sha512-vJkAimD2+sVviNTbaWOGqEBy31cW0ZB52KtpVIbkuma7PlfII3tsLhFa+cwbRAcRBkobBBhqZ06hXoZAN8NODQ==
+"@biomejs/cli-linux-arm64@1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@biomejs/cli-linux-arm64/-/cli-linux-arm64-1.9.4.tgz#8ed1dd0e89419a4b66a47f95aefb8c46ae6041c9"
+  integrity sha512-fJIW0+LYujdjUgJJuwesP4EjIBl/N/TcOX3IvIHJQNsAqvV2CHIogsmA94BPG6jZATS4Hi+xv4SkBBQSt1N4/g==
 
-"@biomejs/cli-linux-x64-musl@1.9.3":
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/@biomejs/cli-linux-x64-musl/-/cli-linux-x64-musl-1.9.3.tgz#01ccee0db2ca2ec9fb51fa69b2fc9e96434b5b32"
-  integrity sha512-TJmnOG2+NOGM72mlczEsNki9UT+XAsMFAOo8J0me/N47EJ/vkLXxf481evfHLlxMejTY6IN8SdRSiPVLv6AHlA==
+"@biomejs/cli-linux-x64-musl@1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@biomejs/cli-linux-x64-musl/-/cli-linux-x64-musl-1.9.4.tgz#f36982b966bd671a36671e1de4417963d7db15fb"
+  integrity sha512-gEhi/jSBhZ2m6wjV530Yy8+fNqG8PAinM3oV7CyO+6c3CEh16Eizm21uHVsyVBEB6RIM8JHIl6AGYCv6Q6Q9Tg==
 
-"@biomejs/cli-linux-x64@1.9.3":
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/@biomejs/cli-linux-x64/-/cli-linux-x64-1.9.3.tgz#82d6fb824dd2c76142ab8625e202eb63a34e14f1"
-  integrity sha512-x220V4c+romd26Mu1ptU+EudMXVS4xmzKxPVb9mgnfYlN4Yx9vD5NZraSx/onJnd3Gh/y8iPUdU5CDZJKg9COA==
+"@biomejs/cli-linux-x64@1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@biomejs/cli-linux-x64/-/cli-linux-x64-1.9.4.tgz#a0a7f56680c76b8034ddc149dbf398bdd3a462e8"
+  integrity sha512-lRCJv/Vi3Vlwmbd6K+oQ0KhLHMAysN8lXoCI7XeHlxaajk06u7G+UsFSO01NAs5iYuWKmVZjmiOzJ0OJmGsMwg==
 
-"@biomejs/cli-win32-arm64@1.9.3":
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/@biomejs/cli-win32-arm64/-/cli-win32-arm64-1.9.3.tgz#7fac607ade8e204eecae09e127713f000da0ccf2"
-  integrity sha512-lg/yZis2HdQGsycUvHWSzo9kOvnGgvtrYRgoCEwPBwwAL8/6crOp3+f47tPwI/LI1dZrhSji7PNsGKGHbwyAhw==
+"@biomejs/cli-win32-arm64@1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@biomejs/cli-win32-arm64/-/cli-win32-arm64-1.9.4.tgz#e2ef4e0084e76b7e26f0fc887c5ef1265ea56200"
+  integrity sha512-tlbhLk+WXZmgwoIKwHIHEBZUwxml7bRJgk0X2sPyNR3S93cdRq6XulAZRQJ17FYGGzWne0fgrXBKpl7l4M87Hg==
 
-"@biomejs/cli-win32-x64@1.9.3":
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/@biomejs/cli-win32-x64/-/cli-win32-x64-1.9.3.tgz#1cbc269dcd5f29b034cb7f5982353c1cc3629318"
-  integrity sha512-cQMy2zanBkVLpmmxXdK6YePzmZx0s5Z7KEnwmrW54rcXK3myCNbQa09SwGZ8i/8sLw0H9F3X7K4rxVNGU8/D4Q==
+"@biomejs/cli-win32-x64@1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@biomejs/cli-win32-x64/-/cli-win32-x64-1.9.4.tgz#4c7afa90e3970213599b4095e62f87e5972b2340"
+  integrity sha512-8Y5wMhVIPaWe6jw2H+KlEm4wP/f7EW3810ZLmDlrEEy5KvBsb9ECEfu/kMWD484ijfQ8+nIi0giMgu9g1UAuuA==
 
 "@bufbuild/protobuf@^2.0.0":
   version "2.2.0"
@@ -451,11 +451,6 @@ basic-ftp@^5.0.2:
   resolved "https://registry.yarnpkg.com/basic-ftp/-/basic-ftp-5.0.5.tgz#14a474f5fffecca1f4f406f1c26b18f800225ac0"
   integrity sha512-4Bcg1P8xhUuqcii/S0Z9wiHIrQVPMermM1any+MX5GeGD7faD3/msQUDGLol9wOcz4/jbg/WJnGqoJF6LiBdtg==
 
-bgutils-js@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/bgutils-js/-/bgutils-js-3.1.0.tgz#b06484e40a653fb42bd75c261f31e499b18e865a"
-  integrity sha512-2S80c/B4OQFubJLD5ddRRp74utrvjA70x9U0RsIVK7gJaDnaPrbw+bnXWxnEnc0euLznmO9jxOtTTC7FxGmv6w==
-
 binary-extensions@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.3.0.tgz#f6e14a97858d327252200242d4ccfe522c445522"
@@ -662,16 +657,14 @@ discord-api-types@0.37.97:
   resolved "https://registry.yarnpkg.com/discord-api-types/-/discord-api-types-0.37.97.tgz#d658573f726ad179261d538dbad4e7e8eca48d11"
   integrity sha512-No1BXPcVkyVD4ZVmbNgDKaBoqgeQ+FJpzZ8wqHkfmBnTZig1FcH3iPPersiK1TUIAzgClh2IvOuVUYfcWLQAOA==
 
-discord-player-youtubei@^1.3.4:
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/discord-player-youtubei/-/discord-player-youtubei-1.3.4.tgz#46abd38a82616f4d8ca71278b99866874dbff032"
-  integrity sha512-8CHI32h7BR+9wX2gMfpnnmbkhfERzelOQtLJ285ZUMP9pfg2iBdzJZAFk6oecHzEtPQhe/fv9qZukiy1C97LVQ==
+discord-player-youtubei@^1.3.7:
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/discord-player-youtubei/-/discord-player-youtubei-1.3.7.tgz#debfab687df122109129f5d777b0726af67f1075"
+  integrity sha512-EZ/ezfUC32VKtKY7CGcEdgeb/V/p9CyQoLwwjuiLxYSaeI4patGVGlCQP0v4cyK2yCJefDmfgjol0lXFwB1KrQ==
   dependencies:
-    bgutils-js "^3.1.0"
-    happy-dom "^15.7.4"
     tiny-typed-emitter "^2.1.0"
-    undici "^6.20.0"
-    youtubei.js "^11.0.1"
+    undici "^7.1.0"
+    youtubei.js "^12.2.0"
 
 discord-player@^6.7.1:
   version "6.7.1"
@@ -746,10 +739,10 @@ domutils@^3.0.1:
     domelementtype "^2.3.0"
     domhandler "^5.0.3"
 
-dotenv@^16.4.5:
-  version "16.4.5"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.5.tgz#cdd3b3b604cb327e286b4762e13502f717cb099f"
-  integrity sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==
+dotenv@^16.4.7:
+  version "16.4.7"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.7.tgz#0e20c5b82950140aa99be360a8a5f52335f53c26"
+  integrity sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==
 
 dynamic-dedupe@^0.3.0:
   version "0.3.0"
@@ -765,7 +758,7 @@ enquirer@2.3.6:
   dependencies:
     ansi-colors "^4.1.1"
 
-entities@^4.2.0, entities@^4.5.0:
+entities@^4.2.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/entities/-/entities-4.5.0.tgz#5d268ea5e7113ec74c4d033b79ea5a35a488fb48"
   integrity sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==
@@ -965,15 +958,6 @@ graceful-fs@^4.1.6, graceful-fs@^4.2.0:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.11.tgz#4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3"
   integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
 
-happy-dom@^15.7.4:
-  version "15.7.4"
-  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-15.7.4.tgz#05aade59c1d307336001b7004c76dfc6a829f220"
-  integrity sha512-r1vadDYGMtsHAAsqhDuk4IpPvr6N8MGKy5ntBo7tSdim+pWDxus2PNqOcOt8LuDZ4t3KJHE+gCuzupcx/GKnyQ==
-  dependencies:
-    entities "^4.5.0"
-    webidl-conversions "^7.0.0"
-    whatwg-mimetype "^3.0.0"
-
 has-flag@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-4.0.0.tgz#944771fd9c81c81265c4d6941860da06bb59479b"
@@ -1104,10 +1088,10 @@ isomorphic-unfetch@^4.0.2:
     node-fetch "^3.2.0"
     unfetch "^5.0.0"
 
-jintr@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/jintr/-/jintr-3.0.2.tgz#633ecc8da930d25f5004697acb5af4ff36628f26"
-  integrity sha512-5g2EBudeJFOopjAX4exAv5OCCW1DgUISfoioCsm1h9Q9HJ41LmnZ6J52PCsqBlQihsmp0VDuxreAVzM7yk5nFA==
+jintr@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/jintr/-/jintr-3.2.0.tgz#38bfc2311c7ed4412ebe0bfc5c2e700f8f433921"
+  integrity sha512-psD1yf05kMKDNsUdW1l5YhO59pHScQ6OIHHb8W5SKSM2dCOFPsqolmIuSHgVA8+3Dc47NJR181CXZ4alCAPTkA==
   dependencies:
     acorn "^8.8.0"
 
@@ -1201,71 +1185,107 @@ make-error@^1.1.1:
   resolved "https://registry.yarnpkg.com/make-error/-/make-error-1.3.6.tgz#2eb2e37ea9b67c4891f684a1394799af484cf7a2"
   integrity sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==
 
-mediaplex-android-arm64@0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/mediaplex-android-arm64/-/mediaplex-android-arm64-0.0.9.tgz#dc45f2454ec27e21ee202b6e81c47cab513577a5"
-  integrity sha512-XAQlZwMcMO2Rk91CL4dK9OgsXa97Ahchd4bu3/DkzTxOXZQUmMZX4yEAN4FjjQctxMefBY9oh5ZdewBAffk+Fg==
+mediaplex-android-arm-eabi@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex-android-arm-eabi/-/mediaplex-android-arm-eabi-1.0.0.tgz#bd313bf10e5bdea8251fddc2b31dde3a10bf0038"
+  integrity sha512-/Ec33NNTeYxDLePRewOnjt82yVjwFy2monHk4OFk/wov7gDXvNCwSsLVRzgQgVQ2QAxmEND75Cx1nlyMWRjfFQ==
 
-mediaplex-darwin-arm64@0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/mediaplex-darwin-arm64/-/mediaplex-darwin-arm64-0.0.9.tgz#aa5e7105598417c08c5bd04e17b73e441363d56c"
-  integrity sha512-Q79D2jxlJ8vtdj5rlV2HgzSqINSMxZC+wpcHkGHZ/lEATh0fC5OlKdjk3wZRgfEEnY851TBuVvZoRJgJYEnKag==
+mediaplex-android-arm64@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex-android-arm64/-/mediaplex-android-arm64-1.0.0.tgz#831ea782517d2a6327b84c15521eb0aa80c23e80"
+  integrity sha512-qisiHCK6HiRhw9qKr99yGFqtJHV9w///Vg5sc3RCA5FpEZOgK/EPkE3XEyVaBXux6XzU9lF5KeCfHuWW/rZEGQ==
 
-mediaplex-darwin-universal@0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/mediaplex-darwin-universal/-/mediaplex-darwin-universal-0.0.9.tgz#0efbdf98691c3f604e56270d7ed5bec3e79b94bf"
-  integrity sha512-hyptA3BKr8SgDbdop8kTS9xQ4rwnYiiwqG3cHCdHj2qaWRjMus6JF6ep27A9GTDs4rFSsSXKivZZ2IlOHEW9OA==
+mediaplex-darwin-arm64@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex-darwin-arm64/-/mediaplex-darwin-arm64-1.0.0.tgz#510aecfe3e77a5f435f4e22a7afdd7ab055e227b"
+  integrity sha512-uux5Lb2RfE+51Xz+wf0fwBpx14k66eexeMjw2IWpEK5LMIU8QI1AU+ag/ocIxEf6yIdu/Dj8b4zaxxfr2B7usw==
 
-mediaplex-darwin-x64@0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/mediaplex-darwin-x64/-/mediaplex-darwin-x64-0.0.9.tgz#0c4ddfa9590b4d6c1dc7e29a5dd22d92286aea38"
-  integrity sha512-gSznB2pTt0QikrqwvNUYcFfUVkVkZiNijw5aaIZDTZfWvyFQk3HtenSQ82zwk4UKt7IfrChgh/7RLmQqOnym2g==
+mediaplex-darwin-universal@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex-darwin-universal/-/mediaplex-darwin-universal-1.0.0.tgz#8fd1cbb5237cb80050439fd43a71f0fdd33b8284"
+  integrity sha512-dwFIEZHuH7zsnAhAqP77Pc7i/YWMgXnDT2hBxF9/K5/wGxlV1HtdpJfY9Pug3A5SiCpb9YwQy5VGhW0se/aqIw==
 
-mediaplex-freebsd-x64@0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/mediaplex-freebsd-x64/-/mediaplex-freebsd-x64-0.0.9.tgz#0572c23ebeff4d0ceda4cc27b94e9e5a6b0bfaa1"
-  integrity sha512-fcCEMLTkyPNb8dYwv+3xKIGBgLKvyw/DX4KDAw0gWy378j8aB+D7HjVupI/XWZODrzkSvIiYabCx0oy4Nyz8dg==
+mediaplex-darwin-x64@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex-darwin-x64/-/mediaplex-darwin-x64-1.0.0.tgz#7c37229201f991a7ecf9d6f387ddfa81c51c3d59"
+  integrity sha512-pAiCp8vPNb1b103v2xV3x6W9SQZifg6+5TGZOczlltpEbANWSy5112MqEwCM3XBohOHcal1zLC2qxdaHM8edhw==
 
-mediaplex-linux-arm-gnueabihf@0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/mediaplex-linux-arm-gnueabihf/-/mediaplex-linux-arm-gnueabihf-0.0.9.tgz#e576275d82503e8d2a8c66d2d19a5f04b61b940b"
-  integrity sha512-ZmXcv81pxgM11/R4d5WVu0ss2Pgi2eTKR/uW9cz5wUHI5uAVsI1Wf8Gufv/h24JsvLDv2e31BUmls742WzvHIQ==
+mediaplex-freebsd-x64@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex-freebsd-x64/-/mediaplex-freebsd-x64-1.0.0.tgz#151354c9faa20b4a13457f137ea30762e8051b22"
+  integrity sha512-9lRsE3GumCRODm6OWBtfRyFCgC5mfLPVl+4miR52/+PVw2ABrdV+lnz2cKZDUfnmwxDGV1fTG6QMxs5D3xcuZQ==
 
-mediaplex-linux-x64-gnu@0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/mediaplex-linux-x64-gnu/-/mediaplex-linux-x64-gnu-0.0.9.tgz#e1a32c38f1b1505ac10d0b1b959b8b88eb794fd7"
-  integrity sha512-Qfzb5BcxX1N1J5ukns5DTruze/ivJJIbK0OuKCBLMoufctPMPlZKKUUJNrro088Lp0AtDXzbQoV4cVAK5nm4UQ==
+mediaplex-linux-arm-gnueabihf@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex-linux-arm-gnueabihf/-/mediaplex-linux-arm-gnueabihf-1.0.0.tgz#6c9b19dabea6f2eccdefd958b489c42571af46e7"
+  integrity sha512-mDBD2d/87CdmR4P0IUYyznzEmBoar7p4cbQiyT44voZ8LIG9w0RWHpP1r5zprbnt73YRrZwJTYhurF7mVixgRQ==
 
-mediaplex-win32-arm64-msvc@0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/mediaplex-win32-arm64-msvc/-/mediaplex-win32-arm64-msvc-0.0.9.tgz#e4df260919c57cf0a47aa984972b1a5168609771"
-  integrity sha512-c3FDtvg2DAoe0EWSh0vIhPwfpHLgEmW8uGajtyON5W5/ygAslAuK9Q9CemHfLfUbeko2r0RlGm2gpygn1PAzLQ==
+mediaplex-linux-arm-musleabihf@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex-linux-arm-musleabihf/-/mediaplex-linux-arm-musleabihf-1.0.0.tgz#c299cfc3a64bd1b389aa7a02573c815351d0be2d"
+  integrity sha512-Jzu8hRxS9vjbgRh92sfPV++wHHUHVGMRmHS0YAxzLso73IAVKMArhsVIEcTDVVN4/yF4D0HzD63AX6M3dgeoCA==
 
-mediaplex-win32-ia32-msvc@0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/mediaplex-win32-ia32-msvc/-/mediaplex-win32-ia32-msvc-0.0.9.tgz#b9ad302923e906e5e87cb9b65113f9433329488a"
-  integrity sha512-ScmLR3wB6norxTXrD4JRYs9EhnbhimjXieDfmgy9DJIagxDiWQ3oxfoj8aUg1bdiS62MIiW78jQxtGUb7z8xkw==
+mediaplex-linux-arm64-gnu@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex-linux-arm64-gnu/-/mediaplex-linux-arm64-gnu-1.0.0.tgz#f9621f7e90f3f7762783e592217e1ab8a531a400"
+  integrity sha512-y6NXkTtjFSDqd6cXliZ8QYcQuHcVCk9MYHIHRNpPJU30M0CUvFx5Itgaemr/Si4Pl+VbU+UGHsoY7O1yoT7xEQ==
 
-mediaplex-win32-x64-msvc@0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/mediaplex-win32-x64-msvc/-/mediaplex-win32-x64-msvc-0.0.9.tgz#df2b3da8ab64d96d9416d962028210025a524fc2"
-  integrity sha512-0H6d4AdciOam1k2iBROjePNE5FA1QkQZ2PqmODAO4ElVEBylgWzGheyAKEyZcmdjNrHORJLl2+XpIssAvsKxag==
+mediaplex-linux-arm64-musl@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex-linux-arm64-musl/-/mediaplex-linux-arm64-musl-1.0.0.tgz#f07da1655f4d72a32a747b3427aedb31204c78b0"
+  integrity sha512-7bpJG5wILQXLAEUAcFafMtlZmNZXKRFXaiMGKWSj29YZnyEwSHRiQEyemxu72SEYQibfwyq9Ah830pZAcfnIsg==
 
-mediaplex@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/mediaplex/-/mediaplex-0.0.9.tgz#e54f8602a01a1195a0f74f117dd336612aad3771"
-  integrity sha512-D907iMYWey2RA5T0EtE82RgY3ufFYZ95/5jjty01SOSUOK8lIudjMpkaMwEewk1/tU1XpthR2/ca0U4MTGSIUw==
+mediaplex-linux-riscv64-gnu@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex-linux-riscv64-gnu/-/mediaplex-linux-riscv64-gnu-1.0.0.tgz#c0f245cc0e2a837eda2bef8e54e74906acbb9c5f"
+  integrity sha512-p0m6R5O/jSg3w6u7LCw2bwCDeXKKeYEmIqy9ORvOVZT6Cin96ojhj6ELj8/spRh8Uox1DUxiPkBJrTEzeNWugA==
+
+mediaplex-linux-x64-gnu@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex-linux-x64-gnu/-/mediaplex-linux-x64-gnu-1.0.0.tgz#bba44ad903eeb4794ff1098a5be64b9cbfa45c6c"
+  integrity sha512-8piBl1DmEeRtElr+aG8OgC7cszzhQN8jGh+ClB6FKIZ2uiRf9SQ9tWH4hsE+qm17SamOekiibG5kXDLNAtPrtg==
+
+mediaplex-linux-x64-musl@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex-linux-x64-musl/-/mediaplex-linux-x64-musl-1.0.0.tgz#4ec41e72bfc3d1cbaa26098a21b9d5975e284c4b"
+  integrity sha512-9hZvUDxPHIuFI+Y4bT3io/TnDK1fnXbfAMWhObWd5qx7YyZJcvgS2M4p0x9a57dZnLSPc7sbNov1tQTqMm03RQ==
+
+mediaplex-win32-arm64-msvc@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex-win32-arm64-msvc/-/mediaplex-win32-arm64-msvc-1.0.0.tgz#7e7954a372f11ade10d896e3d8d2bb6811a8abbd"
+  integrity sha512-R2cQlKR+AjbafdtVnyPftkALxeam4XPEanT5SBo/IO1WmglC5MzppqHm8Gto5NleE16AqXHRPanQoi53fK49xg==
+
+mediaplex-win32-ia32-msvc@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex-win32-ia32-msvc/-/mediaplex-win32-ia32-msvc-1.0.0.tgz#62b998b89e97001b64d3a1fe12756690944cd54e"
+  integrity sha512-CWvcvHw4x0moo2gJeDZEbar39TbCeZ0bV3Vu0n+DWzFEDxl5p3iIeZqlDsHbSvNQeU0iKVCQOgatxvUly3E/4g==
+
+mediaplex-win32-x64-msvc@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex-win32-x64-msvc/-/mediaplex-win32-x64-msvc-1.0.0.tgz#692a31cbd310a5b9549aeecfad18a8bdd04a016d"
+  integrity sha512-yocvA647y6kAgBLpjllVjmp6ayvaBuqwrF+KhQnUnXbGH8celV0clJw9y7Ca8e38v89Yj4C73KpHxwGBk0sGqQ==
+
+mediaplex@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mediaplex/-/mediaplex-1.0.0.tgz#e277ae324900e0ec29cff2977873ec0eaaa514ca"
+  integrity sha512-2vj7Px34rNUmHKilpAagU7jNhKIyoG8/wZ/cvJQzUdhvul8ef03NOK3No3LWVZEF1Pi27VSFOwBvawli/B86hA==
   optionalDependencies:
-    mediaplex-android-arm64 "0.0.9"
-    mediaplex-darwin-arm64 "0.0.9"
-    mediaplex-darwin-universal "0.0.9"
-    mediaplex-darwin-x64 "0.0.9"
-    mediaplex-freebsd-x64 "0.0.9"
-    mediaplex-linux-arm-gnueabihf "0.0.9"
-    mediaplex-linux-x64-gnu "0.0.9"
-    mediaplex-win32-arm64-msvc "0.0.9"
-    mediaplex-win32-ia32-msvc "0.0.9"
-    mediaplex-win32-x64-msvc "0.0.9"
+    mediaplex-android-arm-eabi "1.0.0"
+    mediaplex-android-arm64 "1.0.0"
+    mediaplex-darwin-arm64 "1.0.0"
+    mediaplex-darwin-universal "1.0.0"
+    mediaplex-darwin-x64 "1.0.0"
+    mediaplex-freebsd-x64 "1.0.0"
+    mediaplex-linux-arm-gnueabihf "1.0.0"
+    mediaplex-linux-arm-musleabihf "1.0.0"
+    mediaplex-linux-arm64-gnu "1.0.0"
+    mediaplex-linux-arm64-musl "1.0.0"
+    mediaplex-linux-riscv64-gnu "1.0.0"
+    mediaplex-linux-x64-gnu "1.0.0"
+    mediaplex-linux-x64-musl "1.0.0"
+    mediaplex-win32-arm64-msvc "1.0.0"
+    mediaplex-win32-ia32-msvc "1.0.0"
+    mediaplex-win32-x64-msvc "1.0.0"
 
 minimatch@^3.1.1:
   version "3.1.2"
@@ -1478,10 +1498,10 @@ pm2-sysmonit@^1.2.8:
     systeminformation "^5.7"
     tx2 "~1.0.4"
 
-pm2@^5.4.2:
-  version "5.4.2"
-  resolved "https://registry.yarnpkg.com/pm2/-/pm2-5.4.2.tgz#34a50044cf772c5528d68e2713f84383ebb2e09b"
-  integrity sha512-ynVpBwZampRH3YWLwRepZpQ7X3MvpwLIaqIdFEeBYEhaXbHmEx2KqOdxGV4T54wvKBhH3LixvU1j1bK4/sq7Tw==
+pm2@^5.4.3:
+  version "5.4.3"
+  resolved "https://registry.yarnpkg.com/pm2/-/pm2-5.4.3.tgz#4d8c456c7aa2f5dd59714fd130e9c2f1d924e86e"
+  integrity sha512-4/I1htIHzZk1Y67UgOCo4F1cJtas1kSds31N8zN0PybO230id1nigyjGuGFzUnGmUFPmrJ0On22fO1ChFlp7VQ==
   dependencies:
     "@pm2/agent" "~2.0.0"
     "@pm2/io" "~6.0.1"
@@ -1900,10 +1920,10 @@ undici@^5.19.1:
   dependencies:
     "@fastify/busboy" "^2.0.0"
 
-undici@^6.20.0:
-  version "6.20.1"
-  resolved "https://registry.yarnpkg.com/undici/-/undici-6.20.1.tgz#fbb87b1e2b69d963ff2d5410a40ffb4c9e81b621"
-  integrity sha512-AjQF1QsmqfJys+LXfGTNum+qw4S88CojRInG/6t31W/1fk6G59s92bnAvGz5Cmur+kQv2SURXEvvudLmbrE8QA==
+undici@^7.1.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/undici/-/undici-7.2.0.tgz#446219e2a57cfcbdc2f135fcfa6dc662b3cae169"
+  integrity sha512-klt+0S55GBViA9nsq48/NSCo4YX5mjydjypxD7UmHh/brMu8h/Mhd/F7qAeoH2NOO8SDTk6kjnTFc4WpzmfYpQ==
 
 unfetch@^5.0.0:
   version "5.0.0"
@@ -1944,16 +1964,6 @@ webidl-conversions@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"
   integrity sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==
-
-webidl-conversions@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-7.0.0.tgz#256b4e1882be7debbf01d05f0aa2039778ea080a"
-  integrity sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==
-
-whatwg-mimetype@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/whatwg-mimetype/-/whatwg-mimetype-3.0.0.tgz#5fa1a7623867ff1af6ca3dc72ad6b8a4208beba7"
-  integrity sha512-nt+N2dzIutVRxARx1nghPKGv1xHikU7HKdfafKkLNLindmPU/ch3U31NOCGGA/dmPcmb1VlofO0vnKAcsm0o/Q==
 
 whatwg-url@^5.0.0:
   version "5.0.0"
@@ -1998,12 +2008,12 @@ youtube-sr@^4.3.9:
   resolved "https://registry.yarnpkg.com/youtube-sr/-/youtube-sr-4.3.11.tgz#626663ba03c9a81edf82bd03541234ca59073a6c"
   integrity sha512-3oHiS2x7PpMiDRW7Cq8nz1bkAIBOJHoOwkPl/oncM/+A9/3xxMDgMLGW2dsBEP1DHFyRXYTVABgfbdwHF8sXXQ==
 
-youtubei.js@^11.0.1:
-  version "11.0.1"
-  resolved "https://registry.yarnpkg.com/youtubei.js/-/youtubei.js-11.0.1.tgz#5729bbf2df8dff58c3555140d23ae83c458f0b34"
-  integrity sha512-ZsbOd+5XF2Ofi3FrLMfYd+f9g9H8xswlouFhjhOqbwT68dMJtX6CRGsHNj5VTFCR/+L/865x1lnUlllB2dDDTA==
+youtubei.js@^12.2.0:
+  version "12.2.0"
+  resolved "https://registry.yarnpkg.com/youtubei.js/-/youtubei.js-12.2.0.tgz#54f058b5d0892b5c7e35019e2be6a2a7f7ba4447"
+  integrity sha512-G+50qrbJCToMYhu8jbaHiS3Vf+RRul+CcDbz3hEGwHkGPh+zLiWwD6SS+YhYF+2/op4ZU5zDYQJrGqJ+wKh7Gw==
   dependencies:
     "@bufbuild/protobuf" "^2.0.0"
-    jintr "^3.0.2"
+    jintr "^3.2.0"
     tslib "^2.5.0"
     undici "^5.19.1"

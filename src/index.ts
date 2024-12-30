@@ -17,7 +17,9 @@ config()
 
 const client = new Client({
 	intents: Object.keys(GatewayIntentBits).map((a: string) => {
-		return GatewayIntentBits[a as keyof typeof GatewayIntentBits]
+		return GatewayIntentBits[
+			a as keyof typeof GatewayIntentBits
+		]
 	}),
 	makeCache: Options.cacheWithLimits({
 		UserManager: 100,
